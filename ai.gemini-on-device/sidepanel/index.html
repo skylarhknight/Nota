@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+  <body>
+    <h3>Nota</h3>
+    <h5>Highlight text on the page to start.</h5>
+    <button id="button-summarize-selection">Summarize</button>
+    <button id="button-translate-selection">Translate</button>
+    <button id="button-proofread-selection">Proofread</button>
+    <button id="button-find-quotes-selection">Find Quotes</button>
+    <button id="button-extract-citation">Extract Citation</button>
+  
+    <textarea
+      id="input-prompt"
+      placeholder='Type something, e.g. "What are the key points of the selected text?"'
+      cols="30"
+      rows="5"
+    ></textarea>
+    <div>
+      <input
+        type="range"
+        id="temperature"
+        name="temperature"
+        min="0"
+        max="2"
+        step="0.01"
+      />
+      <label for="temperature"
+        >Temperature: <span id="label-temperature"></span
+      ></label>
+    </div>
+    <div>
+      <input type="range" id="top-k" name="top-k" min="1" max="8" step="1" />
+      <label for="top-k">Top-k: <span id="label-top-k"></span></label>
+    </div>
+    <button id="button-prompt" class="primary" disabled>Run</button>
+    <button id="button-reset" class="secondary" disabled>Reset</button>
+    <button id="button-toggle-highlights">Show Saved Highlights</button>
+    <div id="highlights-section" hidden>
+      <textarea id="highlights-textbox" rows="10" cols="50" readonly></textarea>
+      <br/>
+      <button id="button-save-highlights" hidden>Save All Changes</button>
+      <button id="button-export-highlights">Export Saved Highlights/Citations</button>
+    </div>
+    <div id="response" class="text" hidden></div>
+    <div id="loading" class="text" hidden><span class="blink">...</span></div>
+    <div id="error" class="text" hidden></div>
+    <button id="button-export-response">Export Prompt Response</button>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
