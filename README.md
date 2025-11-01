@@ -7,10 +7,6 @@ Submission for Google Chrome Built-in AI Challenge 2025
 It transforms Chrome into a self-contained productivity assistant that helps users work smarter while browsing, reading, or researching online — without ever sending data outside their computer.
 
 ---
-
-## Video Demo
-
-
 ## Problem Statement
 When researching or browsing online, users often need to:
 - Summarize or simplify long articles  
